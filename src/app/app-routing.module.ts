@@ -14,7 +14,7 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
-    path: 'lazy',
+    path: 'landing',
     loadChildren: './lazy/lazy.module#LazyModule',
   },
   {

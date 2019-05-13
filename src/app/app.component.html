@@ -1,12 +1,14 @@
-<h1>
-    {{title}}
-</h1>
+<div class="topBar">
+    <h2>
+        {{title}}
+    </h2>
+</div>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>
 
-<button routerLink="/login">Login-eager</button>
-<button routerLink="/lazy">lazy</button>
-<button routerLink="/pre">pre</button>
-<button routerLink="">Home</button>
 
-<router-outlet></router-outlet>
 
-<!-- <app-login></app-login> -->
+<lazy-element>
+
+</lazy-element>

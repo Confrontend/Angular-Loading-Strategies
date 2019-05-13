@@ -5,6 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'angular-loading-strategies';
+  title = 'Angular Loading Strategies';
+
+  public loggedIn = false
+
 }

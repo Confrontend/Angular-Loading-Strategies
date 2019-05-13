@@ -1,0 +1,13 @@
+h2 {
+    margin-left: 10px
+}
+
+.topBar {
+    width: 100;
+    background-color: white;
+    margin: 0
+}
+
+.content {
+    padding: 20px
+}
