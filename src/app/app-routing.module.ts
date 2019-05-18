@@ -1,13 +1,14 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { AppPreloadingStrategy } from './app-preloading-strategy';
-import { LoginComponent } from './eager/login/login.component';
+import { NgModule } from '@angular/core'
+import { Routes, RouterModule } from '@angular/router'
+import { CommonModule } from '@angular/common'
+import { AppPreloadingStrategy } from './app-preloading-strategy'
+import { LoginComponent } from './eager/login/login.component'
 
 const routes: Routes = [
-  { path: '',
+  {
+    path: '',
     redirectTo: '/login',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'login',
@@ -18,10 +19,23 @@ const routes: Routes = [
     loadChildren: './lazy/lazy.module#LazyModule',
   },
   {
-    path: 'pre',
+    path: '',
     loadChildren: './pre/pre.module#PreModule',
-    data: { preload: true, delay: 2000 },
-  }
+    data: {
+      preload: true,
+      delay: 2000,
+    },
+  },
+  {
+    path: 'lib',
+    loadChildren: './lib.module#MyLibWrapperModule',
+    //loadChildren: () => import('my-lib').then(m => m.MyLibModule),
+    /*
+     Angular 8 -->
+     With current version, we get this error in browser when using --prod
+     ERROR Error: Uncaught (in promise): Error: Runtime compiler is not loaded
+     */
+  },
 ]
 
 @NgModule({
@@ -34,11 +48,11 @@ const routes: Routes = [
      https://angular.io/tutorial/toh-pt5
      */
     RouterModule.forRoot(routes, {
-      preloadingStrategy: AppPreloadingStrategy
+      preloadingStrategy: AppPreloadingStrategy,
     }),
   ],
   exports: [
     RouterModule,
   ],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -11,9 +11,10 @@ import {
   MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatStepperModule,
   MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule,
 } from '@angular/material'
+import { SharedTestComponent } from './shared-test/shared-test.component'
 
 @NgModule({
-  declarations: [],
+  declarations: [ SharedTestComponent ],
   imports: [
     MatAutocompleteModule,
     MatButtonModule,
@@ -49,6 +50,7 @@ import {
     MatTooltipModule,
   ],
   exports: [
+    SharedTestComponent,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,

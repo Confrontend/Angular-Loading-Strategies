@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core'
+import { MyLibModule } from 'my-lib'
+
 
 @NgModule({
-  declarations: [],
   imports: [
-    CommonModule
-  ]
+    MyLibModule,
+  ],
 })
-export class LibModule { }
+export class MyLibWrapperModule {}
