@@ -8,6 +8,23 @@ h2 {
     margin: 0
 }
 
-.content {
-    padding: 20px
+::ng-deep.mat-toolbar.mat-accent {
+    background-color: #E57716;
+}
+
+mat-toolbar {
+    box-shadow: 0px 2px 2px #EEA34D;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #E57716;
+    color: #eee;
+    text-align: center;
+    font-size: 8px;
+    height: 50px;
+    padding-top: 10px;
 }

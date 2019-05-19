@@ -1,4 +1,14 @@
-<div class="login wrapper">
-    <input type="text">
-    <button routerLink="/landing">Login</button>
+<div class="wrapper">
+    <mat-card class="login">
+        <!-- <mat-form-field class="md-block">
+        <input matinput placeholder="name">
+        <button mat-flat-button routerLink="/landing">Login</button>
+    </mat-form-field> -->
+
+        <mat-form-field appearance="legacy">
+            <mat-label>Type in your name</mat-label>
+            <input matInput placeholder="My name is" autocomplete="off">
+        </mat-form-field>
+        <button mat-raised-button routerLink="/landing">Login</button>
+    </mat-card>
 </div>
