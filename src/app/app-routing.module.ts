@@ -19,7 +19,7 @@ const routes: Routes = [
     loadChildren: './lazy/lazy.module#LazyModule',
   },
   {
-    path: '',
+    path: 'pre',
     loadChildren: './pre/pre.module#PreModule',
     data: {
       preload: true,
@@ -29,7 +29,7 @@ const routes: Routes = [
   {
     path: 'lib',
     loadChildren: './lib.module#MyLibWrapperModule',
-    //loadChildren: () => import('my-lib').then(m => m.MyLibModule),
+    // loadChildren: () => import('my-lib').then(m => m.MyLibModule),
     /*
      Angular 8 -->
      With current version, we get this error in browser when using --prod
