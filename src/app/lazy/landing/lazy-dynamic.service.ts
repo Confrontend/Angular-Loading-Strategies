@@ -22,7 +22,6 @@ export class LazyDynamicService {
       .loader
       .load(path)
       .then(moduleFactory => {
-        console.log(moduleFactory)
         this.moduleRef = moduleFactory.create(this.injector).instance
       })
       .catch(err => {

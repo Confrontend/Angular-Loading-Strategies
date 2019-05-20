@@ -17,9 +17,9 @@ export class LandingComponent implements OnInit {
   lazyLoadModulde() {
     this.lazyService.load()
         .then(_ => {
-          if (!window.customElements.get('lazy-element')) {
+          if (!document.querySelector('lazy-element')) {
             const elm = document.createElement('lazy-element')
-            const content = document.getElementsByClassName('content')[ 0 ]
+            const content = document.getElementsByClassName('lazyElementAnchor')[ 0 ]
             content.appendChild(elm)
           }
         })

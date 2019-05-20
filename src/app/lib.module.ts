@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core'
-import { MyLibModule } from 'my-lib'
+import { MyLibModule } from 'my-lib';
 
 @NgModule({
   imports: [

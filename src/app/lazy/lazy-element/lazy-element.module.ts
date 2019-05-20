@@ -15,10 +15,8 @@ import { createCustomElement } from '@angular/elements'
 export class LazyElementModule {
 
   constructor(private injector: Injector) {
-    console.log('LazyElementModule')
     const lazyElm = createCustomElement(LazyElementComponent, { injector: this.injector })
     customElements.define('lazy-element', lazyElm)
-
   }
 
 }

@@ -1,7 +1,18 @@
 mat-card {
-    width: 150px;
-    height: 300px;
-    float: left;
-    margin-left: 10px;
-    background-color: #efefef;
+  width: 200px;
+  float: left;
+  margin-left: 10px;
+  background-color: #efefef;
+}
+
+button {
+  width: 98%;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.logout {
+  clear: left;
+  margin-top: 20px;
+  width: 150px;
 }
