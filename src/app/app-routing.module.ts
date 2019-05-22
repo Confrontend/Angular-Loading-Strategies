@@ -29,7 +29,7 @@ const routes: Routes = [
   {
     path: 'lib',
     loadChildren: './lib.module#MyLibWrapperModule',
-    // loadChildren: () => import('my-lib').then(m => m.MyLibModule),
+    // Angular 8 --> loadChildren: () => import('my-lib').then(m => m.MyLibModule),
     /*
      Angular 8 -->
      With current version, we get this error in browser when using --prod
